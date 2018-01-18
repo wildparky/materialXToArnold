@@ -1,0 +1,50 @@
+----------------------------------------------
+MaterialX To Arnold Integration Tests
+----------------------------------------------
+
+Recall, integration testing is the phase in software testing in which individual 
+software modules are combined and tested as a group. In this directory is the 
+Arnold materialx procedural's integration tests, which tests combining it with
+with the MaterialX and OpenColorIO libraries. The test are constructed to try
+to maximize code coverage and simulate real world execution.
+
+----------------------------------------------
+OpenColorIO-Configs
+----------------------------------------------
+
+Both Arnold 5 and MaterialX use OpenColorIO. In order to test the MaterialX
+procedural, we need OpenColorIO Config files. 
+
+Arnold: 
+
+Through the 'color_manager_ocio' node Arnold 5 can access color spaces 
+defined in an OCIO config file.
+
+On the 'color_manager_ocio' node, we will set the config parameter.
+The config parameter i apath to the OCIO config file to use, if this is 
+empty OCIO will try to load the config file from the 'OCIO' environment 
+variable.
+
+See https://support.solidangle.com/display/A5NodeRef/color+managers
+
+
+MaterialX: 
+
+The recommended OpenColorIO configuration for MaterialX is ACES 1.0.3.
+
+That is, the MaterialX team recommends:
+
+https://github.com/imageworks/OpenColorIO-Configs/tree/master/aces_1.0.3
+
+As of this writing, there is no 1.0_r3 release/tag. So, we have downloaded at 
+the latest commit on the master branch, which is the latest ACES 1.0.3:
+
+https://github.com/imageworks/OpenColorIO-Configs/archive/84425e4b05ec7f18dd999a12c190020e23c26af0.zip
+
+This is a 837MB+ size file. So, copied over only ACES 1.0.3.
+
+https://github.com/imageworks/OpenColorIO-Configs/tree/master/aces_1.0.3
+
+See: http://www.materialx.org/docs/api/index.html
+
+

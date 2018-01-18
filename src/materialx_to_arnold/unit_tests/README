@@ -1,0 +1,36 @@
+Unit Tests for the MaterialX to Arnold Library.
+
+Recall, unit testing is a software testing method by which individual units of
+source code, sets of one or more computer program modules together with
+associated control data, usage procedures, and operating procedures, are
+tested to determine whether they are fit for use (1).
+
+Ideally, each test case is independent from the others. Substitutes such as
+method stubs, mock objects, fakes, and test harnesses can be used to assist
+testing a module in isolation (2).
+
+Fake: We acquire or build a very lightweight implementation of the same
+functionality as provided by a component that the SUT depends on and instruct
+the SUT to use it instead of the real.
+
+Stub : This implementation is configured to respond to calls from the SUT with
+the values (or exceptions) that will exercise the Untested Code (see Production
+Bugs on page X) within the SUT. A key indication for using a Test Stub is
+having Untested Code caused by the inability to control the indirect inputs of
+the SUT
+
+Mock Object that implements the same interface as an object on which the SUT
+(System Under Test) depends. We can use a Mock Object as an observation point
+when we need to do Behavior Verification to avoid having an Untested Requirement
+(see Production Bugs on page X) caused by an inability to observe side-effects
+of invoking methods on the SUT (3).
+
+For unit testing the MaterialX to Arnold Library, we employ one or more of these
+to isolate our code and unit tests from from the MaterialX and Arnold libraries.
+
+Ref:
+
+1. Kolawa, Adam; Huizinga, Dorota (2007). Automated Defect Prevention: Best
+   Practices in Software Management.
+2. https://en.wikipedia.org/wiki/Unit_testing
+3. http://xunitpatterns.com/

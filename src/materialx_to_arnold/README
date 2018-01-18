@@ -1,0 +1,10 @@
+MaterialX To Arnold Translation Library for the MaterialX Procedural Node
+
+The following library is to handle all the translation from MaterialX to
+Arnold for the materialx procedural. A functional programming approach is
+used as it is good when you have a fixed set of things, and as your code
+evolves, you primarily add new operations on existing things. This can be
+accomplished by adding new functions which compute with existing data types,
+and the existing functions are left alone. That is, the functional
+programming approach is particularly well-suited for the task of translation.
+
