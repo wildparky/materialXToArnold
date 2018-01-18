@@ -1,2 +1,0 @@
-# materialx
-MaterialX
